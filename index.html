@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>СТО «У Алексеича» в р.п. Хохольский — Авторемонт, шиномонтаж, правка дисков</title>
+  <meta name="description" content="Автосервис и шиномонтаж «У Алексеича» в р.п. Хохольский, ул. Беговая, 3. Диагностика ходовой от 200 ₽, ремонт ДВС и КПП, шиномонтаж, правка дисков, аргонная сварка, ОСАГО. Ежедневно 09:00–18:00." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="СТО «У Алексеича» — р.п. Хохольский, ул. Беговая, 3" />
+  <meta property="og:description" content="20+ лет опыта. Честная смета до начала работ, диагностика от 200 ₽, шиномонтаж R13–R18, аргон и ОСАГО." />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c0f14'/%3E%3Cpath d='M21.5 6.5a5.5 5.5 0 0 0-7.2 7.2L7 21a2.1 2.1 0 0 0 3 3l7.3-7.3a5.5 5.5 0 0 0 7.2-7.2l-3.2 3.2-2.6-.6-.6-2.6 3.2-3.2Z' fill='%23f59e0b'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#top" class="brand">
+        <span class="brand__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">СТО «У Алексеича»</span>
+          <span class="brand__loc">р.п. Хохольский, ул. Беговая, 3</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#services">Услуги</a>
+        <a class="nav__link" href="#calculator">Шиномонтаж</a>
+        <a class="nav__link" href="#prices">Цены</a>
+        <a class="nav__link" href="#insurance">ОСАГО</a>
+        <a class="nav__link" href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="header__phone" href="tel:+79202175805">+7 (920) 217-58-05</a>
+        <a class="btn btn--primary btn--sm" href="#booking">Записаться</a>
+        <button class="burger" id="burgerBtn" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a class="mobile-nav__link" href="#services">Услуги и направления</a>
+    <a class="mobile-nav__link" href="#calculator">Калькулятор шиномонтажа</a>
+    <a class="mobile-nav__link" href="#prices">Прайс-лист на ремонт</a>
+    <a class="mobile-nav__link" href="#insurance">ОСАГО и КАСКО</a>
+    <a class="mobile-nav__link" href="#booking">Онлайн-запись на СТО</a>
+    <a class="mobile-nav__link" href="#contacts">Адрес и карта проезда</a>
+    <a class="btn btn--primary" href="tel:+79202175805">Позвонить +7 (920) 217-58-05</a>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <div class="status-pill">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText">Ежедневно 09:00–18:00</span>
+            <span>·</span>
+            <span>Рейтинг 4.4 ★ на Яндекс Картах</span>
+          </div>
+
+          <h1 class="hero__title">
+            Автосервис и шиномонтаж <span>«У Алексеича»</span> в Хохольском
+          </h1>
+
+          <p class="hero__lead">
+            Диагностика ходовой от 200 ₽, ремонт ДВС и КПП, шиномонтаж R13–R18, правка дисков и аргонная сварка.
+            Сначала осматриваем авто и называем честную смету в двух вариантах цены — без навязывания лишнего.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#booking">Записаться на ремонт</a>
+            <a class="btn btn--secondary" href="#calculator">Рассчитать шиномонтаж</a>
+            <a class="btn btn--ghost" href="tel:+79202175805">+7 (920) 217-58-05</a>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card__value">20+ лет</div>
+            <div class="stat-card__label">опыта ремонта отечественных авто и иномарок</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">От 200 ₽</div>
+            <div class="stat-card__label">диагностика ходовой с полным листом осмотра</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">2 сметы</div>
+            <div class="stat-card__label">расчёт цены до старта работ: эконом и «люкс»</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__value">Физ / Юрлица</div>
+            <div class="stat-card__label">разовый ремонт и обслуживание автопарков по договору</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">Все работы в одном месте</span>
+            <h2 class="section__title">Основные направления СТО</h2>
+            <p class="section__subtitle">Берём в работу легковые авто любых марок, внедорожники («Нива» и др.) с любым пробегом.</p>
+          </div>
+          <a class="btn btn--secondary btn--sm" href="#prices">Смотреть весь прайс →</a>
+        </div>
+
+        <div class="cards-grid">
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6M3 12h6M15 12h6"/>
+                </svg>
+              </div>
+              <span class="service-card__price">от 960 ₽ / 4 колеса</span>
+            </div>
+            <h3 class="service-card__title">Шиномонтаж и ремонт шин</h3>
+            <ul class="service-card__list">
+              <li>Сезонная переобувка R13–R18 и «Нива»</li>
+              <li>Балансировка, мойка колёс, герметизация борта</li>
+              <li>Устранение проколов (жгут, грибок, камера)</li>
+              <li>Ремонт боковых порезов и вулканизация</li>
+            </ul>
+            <div class="service-card__footer">
+              <a class="btn btn--secondary btn--sm btn--block" href="#calculator">Калькулятор цены</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                </svg>
+              </div>
+              <span class="service-card__price">от 400 ₽</span>
+            </div>
+            <h3 class="service-card__title">Правка дисков и Аргон</h3>
+            <ul class="service-card__list">
+              <li>Прокатка штампованных дисков (от 400 ₽)</li>
+              <li>Правка литых дисков, устранение «восьмёрки» (от 600 ₽)</li>
+              <li>Аргонная сварка трещин дисков и поддонов картера</li>
+              <li>Сварка алюминия, нержавейки, трубок кондиционера</li>
+            </ul>
+            <div class="service-card__footer">
+              <button type="button" class="btn btn--secondary btn--sm btn--block" data-prefill="Правка диска / аргонная сварка">Записаться</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 17h14M6 12h12l-1.5-5h-9L6 12z"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/>
+                </svg>
+              </div>
+              <span class="service-card__price">диагностика от 200 ₽</span>
+            </div>
+            <h3 class="service-card__title">Ходовая, тормоза и развал</h3>
+            <ul class="service-card__list">
+              <li>Лист диагностики подвески со сметой</li>
+              <li>Замена стоек, пружин, шаровых, сайлентблоков</li>
+              <li>Тормозные колодки, подшипники ступицы, ШРУСы</li>
+              <li>Развал-схождение передних колёс</li>
+            </ul>
+            <div class="service-card__footer">
+              <button type="button" class="btn btn--secondary btn--sm btn--block" data-prefill="Диагностика и ремонт ходовой части (от 200 ₽)">Записаться</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="4" y="8" width="16" height="10" rx="2"/><path d="M8 8V5h8v3M2 13h2M20 13h2"/>
+                </svg>
+              </div>
+              <span class="service-card__price">ГРМ от 800 ₽</span>
+            </div>
+            <h3 class="service-card__title">Двигатель и КПП</h3>
+            <ul class="service-card__list">
+              <li>Замена ремня ГРМ, помпы, термостата, радиатора</li>
+              <li>Замена сцепления (от 2 200 ₽) и ремонт МКПП</li>
+              <li>Ремонт ГБЦ, гидрокомпенсаторы, регулировка клапанов</li>
+              <li>Замер компрессии и капремонт бензиновых ДВС</li>
+            </ul>
+            <div class="service-card__footer">
+              <button type="button" class="btn btn--secondary btn--sm btn--block" data-prefill="Диагностика / ремонт двигателя или КПП">Записаться</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                </svg>
+              </div>
+              <span class="service-card__price">от 200 ₽</span>
+            </div>
+            <h3 class="service-card__title">ТО и замена жидкостей</h3>
+            <ul class="service-card__list">
+              <li>Замена масла ДВС, фильтров и свечей (от 200 ₽)</li>
+              <li>Масло АКПП со снятием поддона, вариатор, МКПП</li>
+              <li>Раздатка, редуктор моста, жидкость ГУР</li>
+              <li>Замена охлаждающей (с промывкой) и тормозной жидкости</li>
+            </ul>
+            <div class="service-card__footer">
+              <button type="button" class="btn btn--secondary btn--sm btn--block" data-prefill="Плановое ТО / замена масла (от 200 ₽)">Записаться</button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card__top">
+              <div class="service-card__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <span class="service-card__price">ОСАГО / КАСКО</span>
+            </div>
+            <h3 class="service-card__title">Автострахование без очередей</h3>
+            <ul class="service-card__list">
+              <li>Бумажные и электронные полисы ОСАГО, КАСКО</li>
+              <li>Помощь молодым водителям и без стажа</li>
+              <li>Легковые, грузовики, мотоциклы и тракторы</li>
+              <li>Оформление вечером, в выходные и по иностр. правам</li>
+            </ul>
+            <div class="service-card__footer">
+              <a class="btn btn--secondary btn--sm btn--block" href="#insurance">Контакты страховщика</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="calculator">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">Удобно с телефона</span>
+            <h2 class="section__title">Калькулятор шиномонтажа</h2>
+            <p class="section__subtitle">Выберите тип дисков и диаметр, чтобы узнать ориентировочную стоимость комплексной переобувки 4 колёс.</p>
+          </div>
+        </div>
+
+        <div class="calc-layout">
+          <div class="panel">
+            <div class="calc-group">
+              <span class="calc-label">1. Тип дисков</span>
+              <div class="segmented" role="group" aria-label="Тип дисков">
+                <button type="button" class="chip-btn is-active" data-disk-type="steel">Штампованные</button>
+                <button type="button" class="chip-btn" data-disk-type="alloy">Литые</button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <span class="calc-label">2. Радиус / автомобиль</span>
+              <div class="segmented segmented--sizes" role="group" aria-label="Размер дисков">
+                <button type="button" class="chip-btn" data-wheel-size="R13">R13</button>
+                <button type="button" class="chip-btn is-active" data-wheel-size="R14">R14</button>
+                <button type="button" class="chip-btn" data-wheel-size="R15">R15</button>
+                <button type="button" class="chip-btn" data-wheel-size="R16">R16</button>
+                <button type="button" class="chip-btn" data-wheel-size="R17-R18">R17–R18</button>
+                <button type="button" class="chip-btn" data-wheel-size="Нива">Нива</button>
+              </div>
+            </div>
+
+            <div class="calc-group">
+              <span class="calc-label">3. Дополнительные работы (при необходимости)</span>
+              <div class="addon-grid" id="addonGrid"></div>
+            </div>
+          </div>
+
+          <aside class="calc-summary">
+            <h3 class="calc-summary__title">Предварительный расчёт</h3>
+            <div class="calc-summary__total" id="calcTotal">от 1 040 ₽</div>
+            <div class="calc-breakdown" id="calcBreakdown"></div>
+            <button type="button" class="btn btn--primary btn--block" id="applyCalcBtn">
+              Записаться с этим расчётом
+            </button>
+            <p class="calc-note">
+              * Базовая стоимость указана за комплекс на 4 колеса. Итоговая цена зависит от состояния шин/дисков и согласовывается до начала работ.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prices">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">Прозрачный прайс</span>
+            <h2 class="section__title">Цены на основные работы</h2>
+            <p class="section__subtitle">Нажмите на поиск или фильтр — и в один клик добавьте нужную услугу в заявку.</p>
+          </div>
+        </div>
+
+        <div class="price-controls">
+          <div class="tabs" role="tablist" aria-label="Категории услуг">
+            <button type="button" class="tab-btn is-active" data-cat="all">Все услуги</button>
+            <button type="button" class="tab-btn" data-cat="suspension">Ходовая</button>
+            <button type="button" class="tab-btn" data-cat="engine">ДВС и КПП</button>
+            <button type="button" class="tab-btn" data-cat="maintenance">ТО и жидкости</button>
+            <button type="button" class="tab-btn" data-cat="tires">Шины и диски</button>
+          </div>
+
+          <div class="search-box">
+            <svg class="search-box__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" id="priceSearch" placeholder="Найти: ГРМ, масло, сцепление, диск..." aria-label="Поиск по прайс-листу" />
+          </div>
+        </div>
+
+        <div class="price-table" id="priceTable"></div>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="section__eyebrow">Порядок работы</span>
+            <h2 class="section__title">Как мы работаем — без сюрпризов в чеке</h2>
+          </div>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-card__num">1</div>
+            <h3 class="step-card__title">Выслушаем и осмотрим</h3>
+            <p class="step-card__text">Зададим вопросы по симптомам, проверим машину и точно определим причину поломки.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__num">2</div>
+            <h3 class="step-card__title">Дадим два варианта сметы</h3>
+            <p class="step-card__text">До ремонта подробно распишем бюджетный и «люксовый» вариант по работе и запчастям.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__num">3</div>
+            <h3 class="step-card__title">Согласуем с вами</h3>
+            <p class="step-card__text">Делаем только то, что утвердил хозяин. Никаких внезапных доплат при выдаче авто.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__num">4</div>
+            <h3 class="step-card__title">Покажем старые детали</h3>
+            <p class="step-card__text">Выполняем работу в срок и обязательно предъявляем снятые дефектные узлы.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="insurance">
+      <div class="container">
+        <div class="insurance-banner">
+          <div>
+            <span class="section__eyebrow">Страхование на месте</span>
+            <h2 class="section__title">Полисы ОСАГО и КАСКО без очередей</h2>
+            <p class="section__subtitle">
+              Оформляем бумажные и электронные полисы, даже если есть сложности со стажем, временем или типом техники.
+            </p>
+            <div class="insurance-tags">
+              <span class="tag">Молодым водителям</span>
+              <span class="tag">Мотоциклы и тракторы</span>
+              <span class="tag">Грузовые авто</span>
+              <span class="tag">Иностранные документы</span>
+              <span class="tag">Минимальный срок</span>
+              <span class="tag">Вечер и выходные</span>
+            </div>
+          </div>
+
+          <div class="insurance-box">
+            <div class="contact-item__label">Специалист по страхованию</div>
+            <div class="contact-item__value">Кузьмина Елена Викторовна</div>
+            <a class="btn btn--primary" href="tel:+79009590282">Позвонить +7 (900) 959-02-82</a>
+            <a class="btn btn--secondary" href="tel:+79202175804">Доп. тел +7 (920) 217-58-04</a>
+            <a class="btn btn--ghost btn--sm" href="mailto:kusminalen@yandex.ru">kusminalen@yandex.ru</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="booking">
+      <div class="container">
+        <div class="booking-grid">
+          <div class="panel">
+            <span class="section__eyebrow">Быстрая запись в бокс</span>
+            <h2 class="section__title">Записаться на ремонт или шиномонтаж</h2>
+            <p class="section__subtitle" style="margin-bottom: 22px;">
+              Оставьте заявку — она сразу сформируется для отправки мастеру в WhatsApp или звонка без ожидания на линии.
+            </p>
+
+            <form id="bookingForm">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="bookingName">Ваше имя *</label>
+                  <input id="bookingName" name="name" type="text" placeholder="Например, Сергей" required />
+                </div>
+                <div class="form-field">
+                  <label for="bookingPhone">Телефон для связи *</label>
+                  <input id="bookingPhone" name="phone" type="tel" placeholder="+7 (9__) ___-__-__" required />
+                </div>
+                <div class="form-field">
+                  <label for="bookingCar">Марка и модель авто</label>
+                  <input id="bookingCar" name="car" type="text" placeholder="Например, Lada Granta / Kia Rio" />
+                </div>
+                <div class="form-field">
+                  <label for="bookingTime">Удобный день / время</label>
+                  <input id="bookingTime" name="time" type="text" placeholder="Сегодня после 14:00 / Завтра утром" />
+                </div>
+                <div class="form-field form-field--full">
+                  <label for="bookingDetails">Что нужно сделать или симптомы</label>
+                  <textarea id="bookingDetails" name="details" rows="3" placeholder="Замена масла, стук в передней подвеске, переобувка R15..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn--primary">Оформить заявку</button>
+                <a class="btn btn--secondary" href="tel:+79202175805">Позвонить +7 (920) 217-58-05</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="panel contact-card" id="contacts">
+            <div>
+              <span class="section__eyebrow">Как нас найти</span>
+              <h2 class="section__title" style="font-size: 1.55rem;">Контакты СТО «У Алексеича»</h2>
+            </div>
+
+            <div class="contact-list">
+              <div>
+                <div class="contact-item__label">Адрес</div>
+                <div class="contact-item__value">Воронежская обл., р.п. Хохольский, ул. Беговая, д. 3</div>
+              </div>
+              <div>
+                <div class="contact-item__label">Режим работы</div>
+                <div class="contact-item__value">Ежедневно, 09:00 – 18:00</div>
+              </div>
+              <div>
+                <div class="contact-item__label">Телефоны сервиса</div>
+                <div class="contact-item__value">
+                  <a href="tel:+79202175805">+7 (920) 217-58-05</a><br />
+                  <a href="tel:+79304183866">+7 (930) 418-38-66</a>
+                </div>
+              </div>
+              <div>
+                <div class="contact-item__label">Почта и работа с организациями</div>
+                <div class="contact-item__value">
+                  <a href="mailto:ernkan@yandex.ru">ernkan@yandex.ru</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-frame">
+              <iframe
+                title="Карта проезда — СТО У Алексеича, р.п. Хохольский, Беговая улица, 3"
+                src="https://yandex.ru/map-widget/v1/?text=%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C+%D1%80.%D0%BF.+%D0%A5%D0%BE%D1%85%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%2C+%D0%91%D0%B5%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F+%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C+3&z=16"
+                loading="lazy"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+            <a
+              class="btn btn--secondary btn--block"
+              href="https://yandex.ru/maps/?text=%D0%92%D0%BE%D1%80%D0%BE%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C+%D1%80.%D0%BF.+%D0%A5%D0%BE%D1%85%D0%BE%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%2C+%D0%91%D0%B5%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F+%D1%83%D0%BB%D0%B8%D1%86%D0%B0%2C+3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Открыть маршрут в Яндекс.Картах
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div>
+          <strong>СТО «Автосервис у Алексеича»</strong> · р.п. Хохольский, ул. Беговая, д. 3
+        </div>
+        <div>
+          ИП Кузьмина Елена Викторовна · ИНН 363100410789 · ОГРНИП 321366800095836
+        </div>
+      </div>
+      <p class="footer__legal">
+        © 2026 cto-alekseich.ru. Представленная на сайте стоимость услуг носит исключительно справочный характер и не является публичной офертой, определяемой положениями ст. 437 (2) ГК РФ. Актуальные цены уточняйте у мастера после осмотра автомобиля.
+      </p>
+    </div>
+  </footer>
+
+  <div class="mobile-bar" aria-label="Быстрые действия">
+    <a class="btn btn--secondary" href="tel:+79202175805">Позвонить</a>
+    <a class="btn btn--primary" href="#booking">Записаться</a>
+  </div>
+
+  <div class="modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__box">
+      <h3 id="modalTitle" style="margin: 0 0 8px;">Заявка готова к отправке</h3>
+      <p id="modalDesc" style="margin: 0; color: var(--text-secondary); font-size: 0.92rem;"></p>
+      <div class="modal__summary" id="modalSummary"></div>
+      <div class="modal__actions">
+        <a id="modalWaBtn" class="btn btn--primary" href="#" target="_blank" rel="noopener noreferrer">
+          Отправить в WhatsApp мастеру
+        </a>
+        <a class="btn btn--secondary" href="tel:+79202175805">
+          Позвонить +7 (920) 217-58-05
+        </a>
+        <button type="button" id="modalCopyBtn" class="btn btn--ghost">Скопировать текст заявки</button>
+        <button type="button" id="modalCloseBtn" class="btn btn--ghost btn--sm">Закрыть окно</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
