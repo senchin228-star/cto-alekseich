@@ -107,8 +107,8 @@ function updateOpenStatus() {
     const isOpen = mskHour >= 9 && mskHour < 18;
     dot.classList.toggle("is-closed", !isOpen);
     text.textContent = isOpen
-      ? "Сейчас открыто · Ежедневно 09:00–18:00"
-      : "Сейчас закрыто · Работаем 09:00–18:00 (оставьте заявку онлайн)";
+      ? "Открыто сейчас · до 18:00"
+      : "Сейчас закрыто · с 09:00 до 18:00";
   } catch {
     text.textContent = "Ежедневно 09:00–18:00";
   }

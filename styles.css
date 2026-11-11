@@ -35,6 +35,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 16px);
+  overflow-x: clip;
 }
 
 body {
@@ -44,6 +45,7 @@ body {
   color: var(--text-primary);
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 
 img {
@@ -324,27 +326,40 @@ textarea {
   max-width: 720px;
 }
 
+.hero__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
 .status-pill {
   display: inline-flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  padding: 7px 14px;
+  gap: 9px;
+  padding: 7px 13px;
   border-radius: 999px;
-  background: rgba(21, 26, 34, 0.9);
+  background: rgba(21, 26, 34, 0.92);
   border: 1px solid var(--border);
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--text-secondary);
-  margin-bottom: 20px;
+  max-width: 100%;
 }
 
 .status-dot {
   width: 8px;
   height: 8px;
+  flex-shrink: 0;
   border-radius: 50%;
   background-color: var(--green);
   box-shadow: 0 0 0 4px var(--green-soft);
+}
+
+.status-star {
+  color: var(--accent);
+  font-size: 0.9rem;
+  line-height: 1;
 }
 
 .status-dot.is-closed {
@@ -481,9 +496,15 @@ textarea {
 /* Tire calculator */
 .calc-layout {
   display: grid;
-  grid-template-columns: 1.35fr 0.95fr;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.95fr);
   gap: 24px;
   align-items: start;
+}
+
+.calc-layout > *,
+.insurance-banner > *,
+.booking-grid > * {
+  min-width: 0;
 }
 
 .panel {
@@ -491,6 +512,7 @@ textarea {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 26px;
+  min-width: 0;
 }
 
 .calc-group {
@@ -803,7 +825,7 @@ textarea {
   border-radius: var(--radius-lg);
   padding: 28px;
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   gap: 24px;
   align-items: center;
 }
@@ -832,12 +854,13 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 0;
 }
 
 /* Booking & Contacts */
 .booking-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 24px;
   align-items: start;
 }
@@ -1037,32 +1060,85 @@ textarea {
   .calc-layout,
   .booking-grid,
   .insurance-banner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 640px) {
+  .container {
+    padding-inline: 14px;
+  }
+
   .header__phone {
     display: none;
   }
 
+  .hero {
+    padding-block: 42px 40px;
+  }
+
   .section {
-    padding-block: 52px;
+    padding-block: 48px;
+  }
+
+  .btn {
+    white-space: normal;
+    text-align: center;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  .hero__cta .btn,
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .panel,
+  .calc-summary,
+  .insurance-banner,
+  .modal__box,
+  .service-card,
+  .step-card {
+    padding: 18px;
+    border-radius: var(--radius-md);
+  }
+
+  .insurance-box {
+    padding: 14px;
+  }
+
+  .chip-btn {
+    padding: 10px 6px;
+    font-size: 0.85rem;
+  }
+
+  .search-box {
+    flex: 1 1 100%;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .calc-breakdown__row {
+    flex-wrap: wrap;
+    gap: 4px 10px;
+  }
+
+  .contact-item__value {
+    overflow-wrap: anywhere;
   }
 
   .cards-grid,
   .addon-grid,
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .form-grid,
   .stats-grid,
   .steps-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .price-row {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 14px 16px;
+    gap: 10px 12px;
   }
 
   .price-row .btn {
@@ -1072,6 +1148,6 @@ textarea {
 
   .mobile-bar {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
 }
